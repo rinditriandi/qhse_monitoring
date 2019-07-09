@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from os import path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,6 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'nj^(#(k5w$u4h!ee)t+k+%!gzy0x3o8e&(t7_(65cvyjz5%-7r'
+
+
+# BASE CONFIGURATION
+SETTINGS_DIR = path.dirname(__file__)
+PROJECT_ROOT = path.dirname(SETTINGS_DIR)
+PROJECT_NAME = path.basename(PROJECT_ROOT)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,6 +48,7 @@ INSTALLED_APPS = [
     'qhse_monitoring.apps.locations',
     'qhse_monitoring.apps.projects',
     'qhse_monitoring.apps.monitoring',
+    'qhse_monitoring.apps.users',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +66,7 @@ ROOT_URLCONF = 'qhse_monitoring.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,4 +131,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = 'static_files'
+# Absolute path to the directory static files should be collected to.
+# Don't put anything in this directory yourself; store your static files
+# in apps' "static/" subdirectories and in STATICFILES_DIRS.
+# Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = os.path.join(SETTINGS_DIR, 'static')
+
+# Additional locations of static files
+STATICFILES_DIRS = (
+    path.join(PROJECT_ROOT, 'static_files'),
+    path.join(PROJECT_ROOT, 'node_modules'),
+)
