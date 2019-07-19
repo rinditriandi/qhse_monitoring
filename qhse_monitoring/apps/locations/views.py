@@ -13,3 +13,10 @@ def add(request):
     }
 
     return render(request, 'locations/add.html', context)
+
+def edit(request, id):
+    context = {
+        'title': 'Edit Lokasi'
+    }
+
+    return render(request, 'locations/edit.html', context)
