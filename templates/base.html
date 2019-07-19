@@ -41,10 +41,10 @@
                     <!-- LOGO -->
                     <a href="index.html" class="logo text-center">
                         <span class="logo-lg">
-                            <img src="{% static 'img/logo1.png' %}" alt="" height="38">
+                            <img src="{% static 'img/logo1.png' %}" alt="" height="40">
                         </span>
                         <span class="logo-sm">
-                            <img src="{% static 'img/logo1.png' %}" alt="" height="28">
+                            <img src="{% static 'img/logo1.png' %}" alt="" height="30">
                         </span>
                     </a>
 
@@ -73,7 +73,7 @@
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="javascript: void(0);" class="side-nav-link">
+                            <a href="{% url 'backoffice:monitoring:index' %}" class="side-nav-link">
                                 <i class="dripicons-suitcase"></i>
                                 <span>Monitoring</span>
                             </a>
@@ -108,7 +108,7 @@
                     <div class="navbar-custom">
                         <ul class="list-unstyled topbar-right-menu float-right mb-0">
 
-                             <li class="dropdown notification-list">
+                            <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                     <i class="dripicons-message noti-icon"></i>
                                     <span class="noti-icon-badge"></span>
@@ -329,7 +329,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                2019 © Document Management System. All rights reserved
+                                2019 © QHSE Monitoring System. All rights reserved
                             </div>
                         </div>
                     </div>
