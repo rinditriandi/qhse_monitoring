@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    context = {
+        'title': 'Lokasi'
+    }
+
+    return render(request, 'locations/index.html', context)
