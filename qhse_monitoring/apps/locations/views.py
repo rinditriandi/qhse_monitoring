@@ -6,3 +6,10 @@ def index(request):
     }
 
     return render(request, 'locations/index.html', context)
+
+def add(request):
+    context = {
+        'title': 'Tambah Lokasi'
+    }
+
+    return render(request, 'locations/add.html', context)
