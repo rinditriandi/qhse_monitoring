@@ -20,3 +20,10 @@ def edit(request, id):
     }
 
     return render(request, 'locations/edit.html', context)
+
+def details(request, id):
+    context = {
+        'title': 'Detil Lokasi'
+    }
+
+    return render(request, 'locations/details.html', context)
