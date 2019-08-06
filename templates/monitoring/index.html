@@ -10,8 +10,8 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="#">DMS</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Monitoringts</a></li>
+                        <li class="breadcrumb-item"><a href="#">QHSE</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Monitoring</a></li>
                         <li class="breadcrumb-item active">Index</li>
                     </ol>
                 </div>
@@ -22,7 +22,7 @@
 
     <div class="row mb-2">
         <div class="col-md-12 text-center">
-            <a href="#">
+            <a href="{% url 'backoffice:monitoring:add' %}">
                 <button type="button" class="btn btn-danger btn-rounded mb-3"><i class="mdi mdi-plus"></i> Tambah Monitoring</button>
             </a>
         </div>
@@ -39,25 +39,30 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label>Company</label>
+                        <label>Lokasi</label>
                         <select id="company" name="company" class="form-control select2" data-toggle="select2">
                             <option>- Select -</option>
-                            <option>PT Mega Maju Selalu</option>
-                            <option>PT Berdiri Lancar Jaya</option>
-                            <option>PT Mega Utama Perkasa</option>
+                            <option>BDJ - Banjarmasin</option>
+                            <option>DPS - Bali</option>
+                            <option>SUB - Surabaya</option>
+                            <option></option>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label>Record Status</label>
+                        <label>Periode</label>
                         <select id="record_status" name="record_status" class="form-control select2" data-toggle="select2">
                             <option>- Select -</option>
-                            <option>Active</option>
-                            <option>Inactive</option>
+                            <option>Juli</option>
+                            <option>Agustus</option>
                         </select>
                     </div>
                 </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-danger btn-sm mb-3"><i class="fas fa-search"></i>Cari</button>
+                </div>
+                
             </div>
         </div>
     </div>

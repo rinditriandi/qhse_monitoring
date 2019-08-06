@@ -12,7 +12,7 @@ def add(request):
         'title': 'Tambah Monitoring'
     }
 
-    return render(request, 'locations/add.html', context)
+    return render(request, 'monitoring/add.html', context)
 
 def edit(request, id):
     context = {

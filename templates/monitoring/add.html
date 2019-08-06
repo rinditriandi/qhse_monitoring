@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content_page %}
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="#">QHSE</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'backoffice:monitoring:index' %}">Monitoring</a></li>
+                        <li class="breadcrumb-item active">Tambah</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Tambah Monitoring</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+
+            <form action="" method="">
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group mb-3">
+                                    <label for="code">Nomor</label>
+                                    <input type="text" id="code" name="code" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="name">Lokasi</label>
+                                    <select id="company" name="company" class="form-control select2" data-toggle="select2">
+                                        <option>- Select -</option>
+                                        <option>BDJ - Banjarmasin</option>
+                                        <option>DPS - Bali</option>
+                                        <option>SUB - Surabaya</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="proyek">Proyek</label>
+                                    <select id="proyek" name="proyek" class="form-control select2" data-toggle="select2">
+                                        <option>- Select -</option>
+                                        <option>Pekerjaan Koridor</option>
+                                        <option>Pekerjaan Rumah Dinas</option>
+                                        <option>Pemasangan Pagar Runway Bandara Bali</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="code">Tanggal</label>
+                                    <input type="text" id="tanggal" name="tanggal" class="form-control" data-provide="datepicker" data-date-autoclose="true">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="status">Status</label>
+                                    <select id="status" name="status" class="form-control select2" data-toggle="select2">
+                                        <option>- Select -</option>
+                                        <option>Aktif</option>
+                                        <option>Non Aktif</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group mb-3">
+                                    <label for="example-textarea">Deskripsi</label>
+                                    <textarea class="form-control" id="example-textarea" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-outline-success btn-rounded">Simpan</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

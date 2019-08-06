@@ -1,0 +1,63 @@
+{% load static %}
+
+<div class="left-side-menu">
+
+    <div class="slimscroll-menu" id="left-side-menu-container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo text-center">
+            <span class="logo-lg">
+                <img src="{% static 'img/logo1.png' %}" alt="" height="40">
+            </span>
+            <span class="logo-sm">
+                <img src="{% static 'img/logo1.png' %}" alt="" height="30">
+            </span>
+        </a>
+
+        <!--- Sidemenu -->
+        <ul class="metismenu side-nav">
+
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="dripicons-meter"></i>
+                    <span>Dashboards</span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="{% url 'backoffice:locations:index' %}" class="side-nav-link">
+                    <i class="dripicons-wallet"></i>
+                    <span>Lokasi</span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-time-reverse"></i>
+                    <span>Proyek</span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="{% url 'backoffice:monitoring:index' %}" class="side-nav-link">
+                    <i class="dripicons-suitcase"></i>
+                    <span>Monitoring</span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-microphone"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+
+        </ul>
+        <!-- End Sidebar -->
+
+        <div class="clearfix"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+
+</div>
