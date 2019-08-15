@@ -6,5 +6,10 @@ app_name = 'users'
 
 urlpatterns = [
     # External
-    path('login/', views.login_view, name="login_view"),
+    path('users/', views.index, name="index"),
+    path('users/add/', views.add, name='add'),
+    path('users/<int:id>/details/', views.details, name='detail'),
+    path('users/<int:id>/edit/', views.edit, name='edit'),
+    path('users/<int:id>/delete/', views.delete, name='delete'),
+    path('users/<int:id>/reset-password/', views.reset_password, name='reset_password')
 ]
