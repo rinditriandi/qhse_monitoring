@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'qhse_monitoring.apps.projects',
     'qhse_monitoring.apps.monitoring',
     'qhse_monitoring.apps.users',
+    'qhse_monitoring.apps.role_permissions',
 ]
 
 MIDDLEWARE = [
